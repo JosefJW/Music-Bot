@@ -61,7 +61,8 @@ song_info = {}
 for song in songs:
     print(song['name'])
     print(song['album']['name'])
-    song_info[song['album']['name']] = get_wikipedia_article(song['album']['name'])
+    if song['album']['name'] not in song_info.keys:
+        song_info[song['album']['name']] = get_wikipedia_article(song['album']['name'])
 
 
 
