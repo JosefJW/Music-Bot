@@ -41,6 +41,7 @@ def get_wikipedia_article(song_title):
         page = wikipedia.page(song_title)
         return page.content
     except Exception as e:
+        print("No article :(")
         return None
 
 def increment_char(char):
@@ -50,20 +51,20 @@ def increment_char(char):
 
 # Fetching all songs
 query = "A"
-print("Query: A")
-songs = get_all_songs()
-print("Getting features...")
-songs = get_features(songs)
+for i in range(26):
+    print("Query: "+query)
+    songs = get_all_songs()
+    query = increment_char(query)
+
+print("Getting song info...")
+song_info = {}
+for song in songs:
+    print(song['name'])
+    print(song['album']['name'])
+    song_info[song['album']['name']] = get_wikipedia_article(song['album']['name'])
+
 
 
 # Save the songs with features to a JSON file
 with open('songs.json', 'w') as f:
-    json.dump(songs, f, indent=4)
-
-# Print the first 5 songs to check
-for song in songs[:5]:
-    print(f"Song: {song['name']} by {song['artist']}")
-    print(f"Danceability: {song['danceability']}, Energy: {song['energy']}")
-
-# Print the total number of songs
-print(f"Total songs: {len(songs)}")
+    json.dump(song_info, f, indent=4)
