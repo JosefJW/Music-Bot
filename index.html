@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Music Bot</h1>
+        <p>Enter a song you like and press Add Song. You can remove songs by clicking on them!</p>
+    </header>
+
+    <div class="container">
+        <!-- Song input and Add Song button -->
+        <div id="song-input-container">
+            <input type="text" id="song-input" class="song-input" placeholder="Enter a song you like">
+            <button id="add-song-button" onclick="addSong()">Add Song</button>
+        </div>
+
+        <!-- Container for song bubbles -->
+        <div id="songs-bubble-container"></div>
+        
+        <div id="loading" style="display:none;">Loading recommendations...</div>
+        <div id="recommendations">
+            <!-- Recommendations will be shown here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 MusicBot. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

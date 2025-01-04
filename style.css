@@ -1,0 +1,108 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.song-input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.thumb-button {
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.thumb-down {
+    background-color: red
+}
+
+.thumb-down:hover {
+    background-color: darkred;
+}
+
+#songs-bubble-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.song-bubble {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.song-bubble:hover {
+    background-color: #2980b9;
+}
+
+#recommendations {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-card {
+    padding: 2px;
+    border-radius: 8px;
+}
+
+
+.flash-green {
+    animation: flashGreen 0.5s ease-in-out;
+}
+
+@keyframes flashGreen {
+    0% { background-color: lightgreen; }
+    100% { background-color: transparent; }
+}
+
+.flash-red {
+    animation: flashRed 0.5s ease-in-out;
+}
+
+@keyframes flashRed {
+    0% { background-color: lightcoral; }
+    100% { background-color: transparent; }
+}
