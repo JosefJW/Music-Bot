@@ -66,8 +66,8 @@ function getRecommendations() {
             <h3>${song.name}</h3>
             <p>Album: ${song.album}</p>
             <p>Similarity: ${song.similarity}%</p>
-            <button class="thumb-button thumb-up"></button>
-            <button class="thumb-button thumb-down"></button>
+            <button class="thumb-button thumb-up">👍</button>
+            <button class="thumb-button thumb-down">👎</button>
         `;
 
         card.querySelector(".thumb-up").addEventListener("click", function() {
