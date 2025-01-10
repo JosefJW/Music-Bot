@@ -2,11 +2,11 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import json
 import time
-import spotify_auth
+import spotify_authentication
 import search_queries_list
 
 # Initialize Spotify client with authentication
-sp = spotify_auth.get_spotify_client()
+sp = spotify_authentication.get_spotify_client()
 songs = []
 search_queries = search_queries_list.search_queries
 file_num = 0
@@ -78,7 +78,6 @@ def search_query_search():
             json.dump("i: "+ str(i) + " File: " + str(file_num), f)
         if i%100 == 0:
             file_num += 1
-        #time.sleep(60)
 
 start = 1112
 file_num = 11
