@@ -1,5 +1,4 @@
 search_queries_list.py
-progress.json
 song_titles_progress.json
 song_titles1.json
 song_titles2.json
@@ -14,3 +13,4 @@ song_titles10.json
 song_titles11.json
 songs.db
 spotify_auth.py
+progress.json
