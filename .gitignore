@@ -14,3 +14,4 @@ song_titles11.json
 songs.db
 spotify_auth.py
 progress.json
+spotify_authentication.py
